@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         gogo.setOnClickListener {
-            startActivity(Intent(MainActivity@this, CalculatorActivity::class.java))
+            startActivity(Intent(this, CalculatorActivity::class.java))
         }
     }
 }

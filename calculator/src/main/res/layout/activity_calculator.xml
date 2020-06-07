@@ -19,242 +19,277 @@
             android:id="@+id/button"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="0"
+            android:text="@string/calculator_button_zero"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/button5"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button4"
-            android:onClick="@{() -> mViewModel.appendDigit(`0`)}"
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_zero)}"
             />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="."
+            android:text="@string/calculator_button_point"
             app:layout_constraintBottom_toBottomOf="@+id/button"
             app:layout_constraintEnd_toStartOf="@+id/button3"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button"
             app:layout_constraintTop_toTopOf="@+id/button"
-            android:onClick="@{() -> mViewModel.appendDigit(`.`)}"/>
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_point)}"/>
 
         <Button
             android:id="@+id/button3"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="="
+            android:text="@string/calculator_button_equals"
+            android:onClick="@{() -> mViewModel.parse()}"
             app:layout_constraintBottom_toBottomOf="@+id/button2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="@+id/button2"
-            android:onClick="@{() -> mViewModel.calculate(mViewModel.EQUALS)}"/>
+            app:layout_constraintTop_toTopOf="@+id/button2"/>
 
         <Button
             android:id="@+id/button4"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="1"
+            android:text="@string/calculator_button_one"
             app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toStartOf="@+id/button5"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button8"
-            android:onClick="@{() -> mViewModel.appendDigit(`1`)}"/>
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_one)}"/>
 
         <Button
             android:id="@+id/button5"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="2"
+            android:text="@string/calculator_button_two"
             app:layout_constraintBottom_toBottomOf="@+id/button4"
             app:layout_constraintEnd_toStartOf="@+id/button6"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button4"
             app:layout_constraintTop_toTopOf="@+id/button4"
-            android:onClick="@{() -> mViewModel.appendDigit(`2`)}"/>
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_two)}"/>
 
         <Button
             android:id="@+id/button6"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="3"
+            android:text="@string/calculator_button_three"
             app:layout_constraintBottom_toBottomOf="@+id/button5"
             app:layout_constraintEnd_toStartOf="@+id/button7"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button5"
             app:layout_constraintTop_toTopOf="@+id/button5"
-            android:onClick="@{() -> mViewModel.appendDigit(`3`)}"/>
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_three)}"/>
 
         <Button
             android:id="@+id/button7"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="+"
+            android:text="@string/calculator_button_addition"
             app:layout_constraintBottom_toBottomOf="@+id/button6"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button6"
             app:layout_constraintTop_toTopOf="@+id/button6"
-            android:onClick="@{() -> mViewModel.calculate(mViewModel.ADD)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_addition)}" />
 
         <Button
             android:id="@+id/button8"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="4"
+            android:text="@string/calculator_button_four"
             app:layout_constraintBottom_toTopOf="@+id/button4"
             app:layout_constraintEnd_toStartOf="@+id/button9"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button12"
-            android:onClick="@{() -> mViewModel.appendDigit(`4`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_four)}" />
 
         <Button
             android:id="@+id/button9"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="5"
+            android:text="@string/calculator_button_five"
             app:layout_constraintBottom_toBottomOf="@+id/button8"
             app:layout_constraintEnd_toStartOf="@+id/button10"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button8"
             app:layout_constraintTop_toTopOf="@+id/button8"
-            android:onClick="@{() -> mViewModel.appendDigit(`5`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_five)}" />
 
         <Button
             android:id="@+id/button10"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="6"
+            android:text="@string/calculator_button_six"
             app:layout_constraintBottom_toBottomOf="@+id/button9"
             app:layout_constraintEnd_toStartOf="@+id/button11"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button9"
             app:layout_constraintTop_toTopOf="@+id/button9"
-            android:onClick="@{() -> mViewModel.appendDigit(`6`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_six)}" />
 
         <Button
             android:id="@+id/button11"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="-"
+            android:text="@string/calculator_button_subtract"
             app:layout_constraintBottom_toBottomOf="@+id/button10"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button10"
             app:layout_constraintTop_toTopOf="@+id/button10"
-            android:onClick="@{() -> mViewModel.calculate(mViewModel.SUBTRACT)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_subtract)}"/>
 
         <Button
             android:id="@+id/button12"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="7"
+            android:text="@string/calculator_button_seven"
             app:layout_constraintBottom_toTopOf="@+id/button8"
             app:layout_constraintEnd_toStartOf="@+id/button13"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button16"
-            android:onClick="@{() -> mViewModel.appendDigit(`7`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_seven)}" />
 
         <Button
             android:id="@+id/button13"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="8"
+            android:text="@string/calculator_button_eight"
             app:layout_constraintBottom_toBottomOf="@+id/button12"
             app:layout_constraintEnd_toStartOf="@+id/button14"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button12"
             app:layout_constraintTop_toTopOf="@+id/button12"
-            android:onClick="@{() -> mViewModel.appendDigit(`8`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_eight)}" />
 
         <Button
             android:id="@+id/button14"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="9"
+            android:text="@string/calculator_button_nine"
             app:layout_constraintBottom_toBottomOf="@+id/button13"
             app:layout_constraintEnd_toStartOf="@+id/button15"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button13"
             app:layout_constraintTop_toTopOf="@+id/button13"
-            android:onClick="@{() -> mViewModel.appendDigit(`9`)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_nine)}" />
 
         <Button
             android:id="@+id/button15"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="x"
+            android:text="@string/calculator_button_multiply"
             app:layout_constraintBottom_toBottomOf="@+id/button14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button14"
             app:layout_constraintTop_toTopOf="@+id/button14"
-            android:onClick="@{() -> mViewModel.calculate(mViewModel.MULTIPLY)}" />
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_multiply)}"/>
 
         <Button
             android:id="@+id/button16"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="+/-"
+            android:text="@string/calculator_button_res"
             app:layout_constraintBottom_toTopOf="@+id/button12"
             app:layout_constraintEnd_toStartOf="@+id/button17"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+            app:layout_constraintTop_toBottomOf="@+id/textView7"
+            android:onClick="@{() -> mViewModel.putResult()}"
+            />
 
         <Button
             android:id="@+id/button17"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="%"
+            android:text="@string/calculator_button_power"
             app:layout_constraintBottom_toBottomOf="@+id/button16"
             app:layout_constraintEnd_toStartOf="@+id/button18"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button16"
-            app:layout_constraintTop_toTopOf="@+id/button16" />
+            app:layout_constraintTop_toTopOf="@+id/button16"
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_power)}"
+            />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text="C"
+            android:text="@string/calculator_button_clear"
+            android:onClick="@{() -> mViewModel.reset()}"
             app:layout_constraintBottom_toBottomOf="@+id/button17"
             app:layout_constraintEnd_toStartOf="@+id/button19"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button17"
-            app:layout_constraintTop_toTopOf="@+id/button17"
-            android:onClick="@{() -> mViewModel.resetResult()}"/>
+            app:layout_constraintTop_toTopOf="@+id/button17"/>
 
         <Button
             android:id="@+id/button19"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:text=":"
+            android:text="@string/calculator_button_division"
             app:layout_constraintBottom_toBottomOf="@+id/button18"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button18"
             app:layout_constraintTop_toTopOf="@+id/button18"
-            android:onClick="@{() -> mViewModel.calculate(mViewModel.DIVIDE)}"/>
+            android:onClick="@{() -> mViewModel.appendDigit(@string/calculator_button_division)}"/>
 
-        <TextView
+        <LinearLayout
             android:id="@+id/textView7"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:gravity="bottom|right"
-            android:padding="8dp"
-            android:text="@{mViewModel.result}"
-            android:textSize="64sp"
+            android:orientation="vertical"
             app:layout_constraintBottom_toTopOf="@+id/button16"
             app:layout_constraintDimensionRatio=""
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|end"
+                android:paddingEnd="8dp"
+                android:paddingStart="8dp"
+                android:text="@{mViewModel.result}"
+                android:textSize="36sp"
+                tools:text="5000"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"/>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom|end"
+                android:paddingRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@{mViewModel.input}"
+                android:textColor="@color/colorInput"
+                android:textSize="36sp"
+                tools:text="20000" />
+        </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
