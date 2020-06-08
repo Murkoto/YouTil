@@ -1,2 +1,4 @@
-include ':app', ':calculator'
+include ':calculator'
+include ':mathstringparser'
+include ':app'
 rootProject.name = "YouTil"

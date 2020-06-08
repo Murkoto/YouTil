@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">YouTil</string>
+    <string name="title">Calculator</string>
     <string name="calculator_button_zero">0</string>
     <string name="calculator_button_point">.</string>
     <string name="calculator_button_one">1</string>

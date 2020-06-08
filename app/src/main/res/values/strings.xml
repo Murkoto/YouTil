@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">YouTil</string>
+    <string name="title_calculator">Calculator</string>
+    <string name="module_tile_icon">module_tile_icon</string>
 </resources>
